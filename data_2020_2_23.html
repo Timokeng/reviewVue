@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>复习Vue</title>
+        <link href="css/norma.css" rel="stylesheet" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div v-bind:[dynamicattribute]='id'>Message: {{msg}}</div>
+            <div v-once>这个不会改变： {{msg}}</div>
+            <div>Use Mustache: {{rawHtml}}</div>
+            <div>Use v-html:<span v-html="rawHtml"></span></div>
+            <div>
+                <button v-bind:disabled="isButtonDisabled">Button</button>
+            </div>
+            <div>
+                <div>{{msg2}}</div>
+                <div>{{reverseMsg}}</div>
+                <div>
+                    <input v-model="msg2">
+                </div>
+            </div>
+            </div>
+            <div>
+                <div>firstName: {{firstName}}</div>
+                <div>lastName: {{lastName}}</div>
+                <div>fullName: {{fullName}}</div>
+            </div>
+        </div>
+        <script src="js/theVue2.js" type="text/javascript"></script>
+    </body>
+</html>

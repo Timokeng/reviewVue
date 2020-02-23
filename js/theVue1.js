@@ -3,7 +3,7 @@ Vue.component('item-model', {
     template: '<li>{{item.text}}</li>'
 })
 
-var vue = new Vue({
+var vm = new Vue({
     el: "#app",
     data: {
       message1: "Hello Vue!",
