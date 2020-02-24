@@ -13,6 +13,18 @@
             <div v-bind:class="dynamicClass">直接调用完整对象做class</div>
             <div v-bind:class="computedClass">通过计算属性设置class</div>
             <div v-bind:style="styleData">通过v-bind设置动态style</div>
+            <div>
+                <h1 v-if="show">Wooooooooooo!</h1>
+                <h1 v-else>Oh no.</h1>
+                <template v-if="show">
+                    <p>不渲染外部的template</p>
+                    <p>可以在内部编辑更多的内容</p>
+                    <p>但我不喜欢，感觉DOM结构会不那么直观</p>
+                </template>
+                <p v-show="show">v-show知识修改css中的display属性</p>
+                <p v-show="show">v-if则是真正的条件渲染，决定是否渲染元素</p>
+                <p v-show="show">切换较多show更好，切换少则选用if</p>
+            </div>
         </div>
         <script src="js/theVue3.js" type="text/javascript"></script>
     </body>

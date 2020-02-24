@@ -10,7 +10,8 @@ var vm = new Vue({
         styleData: {
             color: "red",
             fontSize: "18px"
-        }
+        },
+        show: true
     },
     computed: {
         computedClass: function(){
