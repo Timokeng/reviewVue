@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>复习Vue</title>
+        <!--<link href="css/norma.css" rel="stylesheet" type="text/css">-->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div>
+                <div><button v-on:click="counter += 1">Add 1</button></div>
+                <div>There are {{counter}} items</div>
+            </div>
+            <div v-on:click.capture="console.log('get1')">
+                <button v-on:click="greet">Greet</button>
+            </div>
+            <div>
+                <input v-model.trim.lazy="str1" placeholder="input something">
+                <label>Input: {{str1}}</label>
+            </div>
+            <div>
+                <textarea v-model="str2" palceholder="input something"></textarea>
+                <p style="white-space: pre-line;">Text: {{str2}}</p>
+            </div>
+            <div>
+                <input type="radio" id="one" value="one" v-model="picked">
+                <label for="one">One</label>
+                <br>
+                <input type="radio" id="two" value="two" v-model="picked">
+                <label for="two">Two</label>
+                <br>
+                <span>Pick: {{picked}}</span>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox" v-model="checked">
+                <label for="checkbox">Checked: {{checked}}</label>
+            </div>
+            <div>
+                <input type="checkbox" id="jack" value="jack" v-model="checkeds">
+                <labe for="jack">jack</labe> 
+                <input type="checkbox" id="tom" value="tom" v-model="checkeds">
+                <label for="tom">tom</label>
+                <input type="checkbox" id="tony" value="tony" v-model="checkeds">
+                <label for="tony">tony</label>
+                <p>Checkeds: {{checkeds}}</p>
+            </div>
+            <div>
+                <select v-model="select">
+                    <option disabled value="">请选择</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+                <p>Selct: {{select}}</p>
+            </div>
+        </div>
+        <script src="js/theVue4.js" type="text/javascript"></script>
+    </body>
+</html>
