@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>复习vue</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div>
+                <component-a v-bind="post" title="默认attribut"></component-a>
+            </div>
+            <div>
+                <base-checkbox v-model='checked'></base-checkbox>
+                <div>{{checked}}</div>
+            </div>
+            <div>
+                <component-b v-bind:title.sync="title"></component-b>
+            </div>
+        </div>
+        <script src="js/theVue6.js" type="text/javascript"></script>
+    </body>
+</html>
