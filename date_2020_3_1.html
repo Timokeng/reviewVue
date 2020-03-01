@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>html模板</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <component-a>
+                <template v-slot:header>
+                    <div class="header">This is the header</div>
+                </template>
+
+                <template v-slot:default>
+                    <p>This is the article</p>
+                    <p>The name of this slot is 'default'</p>
+                </template>
+
+                <template v-slot:footer>
+                    <div>This is the footer</div>
+                </template>
+            </component-a>
+
+            <component-b>
+                <template v-slot="{user}">
+                    {{user.name}}
+                </template>
+            </component-b>
+        </div>
+        </div>
+        <script src="js/theVue7.js" type="text/javascript"></script>
+    </body>
+</html>
